@@ -6,7 +6,7 @@ import './index.scss';
 
 export default function Projects() {
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <List />
     </section>
   );

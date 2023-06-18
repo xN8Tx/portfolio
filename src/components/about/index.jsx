@@ -12,7 +12,7 @@ export default function About() {
   const { about, aboutText, aboutButton, see } = useText();
 
   return (
-    <section className="about">
+    <section className="about" id="about">
       <SectionHeading>{about}</SectionHeading>
       <BigParagraph>{aboutText}</BigParagraph>
       <ButtonAnchor href="#projects" hoverText={see}>
