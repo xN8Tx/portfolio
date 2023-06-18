@@ -1,0 +1,29 @@
+.projects__title {
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &_text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 900;
+    font-size: calc(45px + (40 + 40 * 0.7) * (100vw - 320px) / 1400);
+  }
+
+  &_skills {
+    max-width: 300px;
+    margin-top: 42px;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    &_skills {
+      text-align: center;
+    }
+  }
+}

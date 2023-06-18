@@ -1,0 +1,7 @@
+.paragraph {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: calc(25px + (10 + 10 * 0.7) * (100vw - 320px) / 1400);
+  color: var(--text);
+}

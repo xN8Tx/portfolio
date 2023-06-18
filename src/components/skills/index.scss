@@ -1,0 +1,14 @@
+.skills {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+}

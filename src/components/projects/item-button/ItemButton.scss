@@ -1,0 +1,26 @@
+.projects__button {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &_link {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--text);
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    @media (min-width: 767px) {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
