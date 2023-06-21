@@ -1,30 +1,39 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 
-import useText from '../../../hooks/useText';
-import addZeroToNum from '../../../utils/addZeroToNum';
+import useOnScreen from '../../../hooks/useOnScreen';
 
-import SectionHeading from '../../../ui/headings/SectionHeading';
 import ItemTitle from '../item-title/ItemTitle';
 import ItemImage from '../item-image/ItemImage';
-import ItemButton from '../item-button/ItemButton';
 
 import './Item.scss';
+import { useState } from 'react';
 
-export default function Item({ index, firstName, secondName, skills, github, link, image }) {
-  const project = useText().project;
+export default function Item({ name, skills, github, link, image }) {
+  const [isAnimationShown, setIsAnimationShown] = useState(false);
+  const container = useRef(null);
+  const imageBlock = useRef(null);
 
-  ++index;
+  const onScreen = useOnScreen(container, '50%');
+
+  useEffect(() => {
+    if (isAnimationShown) return () => {};
+    if (!container && !imageBlock) return () => {};
+    if (!onScreen) return () => {};
+
+    gsap.to(imageBlock.current, {
+      opacity: 1,
+      y: 0,
+      duration: 2,
+    });
+
+    setIsAnimationShown(true);
+  }, [onScreen, container, imageBlock]);
 
   return (
-    <div className="projects__item">
-      <div className="projects__item_wrapper">
-        <SectionHeading>
-          {project} {addZeroToNum(index)}
-        </SectionHeading>
-        <ItemTitle firstName={firstName} secondName={secondName} skills={skills} />
-        <ItemButton github={github} link={link} />
-      </div>
-      <ItemImage link={link} image={image} />
+    <div className="projects__item" ref={container}>
+      <ItemImage link={link} image={image} ref={imageBlock} data-scroll />
+      <ItemTitle name={name} skills={skills} github={github} />
     </div>
   );
 }

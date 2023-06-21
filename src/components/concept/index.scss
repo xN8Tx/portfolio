@@ -16,5 +16,12 @@
     font-size: calc(64px + (50 + 50 * 0.7) * (100vw - 320px) / 1400);
     text-align: center;
     letter-spacing: 0.03em;
+
+    transform: translateY(500px);
+
+    &_container {
+      overflow: hidden;
+      padding: 20px 0;
+    }
   }
 }

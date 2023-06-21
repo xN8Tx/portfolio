@@ -8,7 +8,7 @@ import './index.scss';
 
 export default function Header() {
   return (
-    <header className="header">
+    <header className="header" data-scroll-section>
       <Theme />
       <Logo />
       <Language />

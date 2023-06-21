@@ -7,7 +7,7 @@ import './index.scss';
 
 export default function Navigation() {
   return (
-    <nav className="navigation">
+    <nav className="navigation" data-scroll-section>
       <Anchors />
       <Links />
     </nav>

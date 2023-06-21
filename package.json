@@ -14,11 +14,14 @@
   "dependencies": {
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "gsap": "^3.12.1",
     "husky": "^8.0.3",
+    "locomotive-scroll": "^4.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.12.1",
-    "sass": "^1.63.3"
+    "sass": "^1.63.3",
+    "split-type": "^0.3.3"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",

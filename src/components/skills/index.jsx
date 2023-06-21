@@ -12,7 +12,7 @@ export default function Skills() {
   const { skills, links, contact } = useText();
 
   return (
-    <section className="skills" id="skills">
+    <section className="skills" id="skills" data-scroll-section>
       <SectionHeading>{skills}</SectionHeading>
       <ListWrapper />
       <ButtonAnchor href={links[1].href} hoverText={links[1].name}>

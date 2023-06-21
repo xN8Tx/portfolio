@@ -10,8 +10,10 @@ export default function Anchors() {
   return (
     <ul className="navigation__list">
       {anchors.map((anchor, index) => (
-        <li key={index}>
-          <TextAnchor href={anchor.href}>{anchor.name}</TextAnchor>
+        <li key={index} className="navigation__list_item">
+          <TextAnchor href={anchor.href} data-anchor>
+            {anchor.name}
+          </TextAnchor>
         </li>
       ))}
     </ul>

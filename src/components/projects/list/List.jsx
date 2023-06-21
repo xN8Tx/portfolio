@@ -14,9 +14,7 @@ export default function List() {
       {projects.map((project, index) => (
         <Item
           key={index}
-          index={index}
-          firstName={project.firstName}
-          secondName={project.secondName}
+          name={project.name}
           skills={project.skills}
           github={project.github}
           link={project.link}

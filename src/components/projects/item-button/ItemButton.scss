@@ -1,10 +1,4 @@
 .projects__button {
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   &_link {
     font-family: 'Inter';
     font-style: normal;
@@ -16,11 +10,5 @@
     display: flex;
     align-items: center;
     gap: 7px;
-
-    @media (min-width: 767px) {
-      &:last-child {
-        display: none;
-      }
-    }
   }
 }

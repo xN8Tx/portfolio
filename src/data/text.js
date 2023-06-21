@@ -6,7 +6,7 @@ import studio from '../assets/studio.webp';
 
 // SEE
 const seeEN = 'See';
-const seeRU = 'Глянуть';
+const seeRU = 'Посмотреть';
 
 // demo
 const demoEN = 'demo';
@@ -27,7 +27,7 @@ const anchorsEN = [
     href: '#about',
   },
   {
-    name: 'Projects',
+    name: 'Skills',
     href: '#skills',
   },
   {
@@ -78,40 +78,35 @@ const projectEN = 'Project';
 
 const projectsRU = [
   {
-    firstName: 'Онлайн',
-    secondName: 'Школа',
+    name: 'Онлайн школа',
     skills: ['React', 'RTK', 'ExpressJS', 'NodeJS', 'PostgreSQL', 'JWT'],
     github: 'https://github.com/xN8Tx/start-rsl',
     link: 'http://217.71.129.139:5408',
     image: school,
   },
   {
-    firstName: 'Архитектурная',
-    secondName: 'Студия',
+    name: 'Архитектурная cтудия',
     skills: ['React', 'Zustand', 'TypeScript'],
     github: 'https://github.com/xN8Tx/digital-project',
     link: 'digital-project-rho.vercel.app',
     image: architecture,
   },
   {
-    firstName: 'Приложение',
-    secondName: 'Погоды',
+    name: 'Приложение погоды',
     skills: ['React'],
     github: 'https://github.com/xN8Tx/weather-app',
     link: 'http://217.71.129.139:5408',
     image: weather,
   },
   {
-    firstName: 'Веб',
-    secondName: 'Студия',
+    name: 'Веб студия',
     skills: ['HTML', 'SCSS', 'GSAP', 'GULP'],
     github: 'https://github.com/xN8Tx/Yudaev',
     link: 'http://217.71.129.139:5408',
     image: studio,
   },
   {
-    firstName: 'Студия',
-    secondName: 'Посуды',
+    name: 'Студия посуды',
     skills: ['HTML', 'SCSS', 'GSAP', 'LocomotiveScroll', 'GULP'],
     github: 'https://github.com/xN8Tx/Tom-crew',
     link: 'http://217.71.129.139:5408',
@@ -121,40 +116,35 @@ const projectsRU = [
 
 const projectsEN = [
   {
-    firstName: 'Online',
-    secondName: 'School',
+    name: 'Online school',
     skills: ['React', 'RTK', 'ExpressJS', 'NodeJS', 'PostgreSQL', 'JWT'],
     github: 'https://github.com/xN8Tx/start-rsl',
     link: 'http://217.71.129.139:5408',
     image: school,
   },
   {
-    firstName: 'Architecture',
-    secondName: 'Studio',
+    name: 'Architecture studio',
     skills: ['React', 'Zustand', 'TypeScript'],
     github: 'https://github.com/xN8Tx/digital-project',
     link: 'digital-project-rho.vercel.app',
     image: architecture,
   },
   {
-    firstName: 'Weather',
-    secondName: 'App',
+    name: 'Weather app',
     skills: ['React'],
     github: 'https://github.com/xN8Tx/weather-app',
     link: 'http://217.71.129.139:5408',
     image: weather,
   },
   {
-    firstName: 'Web',
-    secondName: 'Studio',
+    name: 'Web studio',
     skills: ['HTML', 'SCSS', 'GSAP', 'GULP'],
     github: 'https://github.com/xN8Tx/Yudaev',
     link: 'http://217.71.129.139:5408',
     image: studio,
   },
   {
-    firstName: 'Utils',
-    secondName: 'Studio',
+    name: 'Utils studio',
     skills: ['HTML', 'SCSS', 'GSAP', 'LocomotiveScroll', 'GULP'],
     github: 'https://github.com/xN8Tx/Tom-crew',
     link: 'http://217.71.129.139:5408',
