@@ -95,7 +95,7 @@ const projectsRU = [
     name: 'Приложение погоды',
     skills: ['React'],
     github: 'https://github.com/xN8Tx/weather-app',
-    link: 'http://217.71.129.139:5408',
+    link: 'https://shteyn-weather.netlify.app/',
     image: weather,
   },
   {
@@ -176,7 +176,7 @@ const aboutEN = 'About me';
 const aboutTextEN =
   "I'm a 19 y.o  frontend developer living in Russia, Novosibirsk. I have been doing that year and I devote most of my time self-improvement and develop my own projects. My main goal is to get new knowledge in programming. Deepen the knowledge already gained.";
 const aboutTextRU =
-  'Я 19-летний фронтенд-разработчик, живу в России, Новосибирск. Я занимаюсь разработкой уже год и большую часть своего времени посвящаю самосовершенствованию и созданию собственных проектов. Моя основная цель - получение новых знаний в программирование. Углубляться в уже полученные знания.';
+  'Я 19-летний фронтенд-разработчик, живу в России, Новосибирск. Занимаюсь разработкой уже год и большую часть своего времени посвящаю самосовершенствованию и созданию собственных проектов. Моя основная цель - получение новых знаний в программирование. Углубляться в уже полученные знания.';
 
 const aboutButtonRU = 'Проекты';
 const aboutButtonEN = 'Projects';
