@@ -133,7 +133,7 @@ const projectsEN = [
     name: 'Weather app',
     skills: ['React'],
     github: 'https://github.com/xN8Tx/weather-app',
-    link: 'http://217.71.129.139:5408',
+    link: 'https://shteyn-weather.netlify.app/',
     image: weather,
   },
   {
