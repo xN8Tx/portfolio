@@ -88,7 +88,7 @@ const projectsRU = [
     name: 'Архитектурная cтудия',
     skills: ['React', 'Zustand', 'TypeScript'],
     github: 'https://github.com/xN8Tx/digital-project',
-    link: 'digital-project-rho.vercel.app',
+    link: 'https://digital-project-rho.vercel.app',
     image: architecture,
   },
   {
@@ -109,7 +109,7 @@ const projectsRU = [
     name: 'Студия посуды',
     skills: ['HTML', 'SCSS', 'GSAP', 'LocomotiveScroll', 'GULP'],
     github: 'https://github.com/xN8Tx/Tom-crew',
-    link: 'http://217.71.129.139:5408',
+    link: 'https://gregarious-longma-f7da78.netlify.app/',
     image: utils,
   },
 ];
@@ -126,7 +126,7 @@ const projectsEN = [
     name: 'Architecture studio',
     skills: ['React', 'Zustand', 'TypeScript'],
     github: 'https://github.com/xN8Tx/digital-project',
-    link: 'digital-project-rho.vercel.app',
+    link: 'https://digital-project-rho.vercel.app',
     image: architecture,
   },
   {
@@ -147,7 +147,7 @@ const projectsEN = [
     name: 'Utils studio',
     skills: ['HTML', 'SCSS', 'GSAP', 'LocomotiveScroll', 'GULP'],
     github: 'https://github.com/xN8Tx/Tom-crew',
-    link: 'http://217.71.129.139:5408',
+    link: 'https://gregarious-longma-f7da78.netlify.app/',
     image: utils,
   },
 ];
