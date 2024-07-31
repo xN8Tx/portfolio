@@ -1,0 +1,49 @@
+.footer {
+  width: 100%;
+  height: 70px;
+
+  &__row {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &_item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &:nth-child(2) {
+        justify-content: center;
+
+        &>p {
+          opacity: 0.3;
+          transition: all ease-in 0.3s;
+
+          &>a {
+            font-size: 14px;
+          }
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+
+  &__nav {
+    max-width: 50%;
+    gap: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__time {
+    width: 50%;
+  }
+}

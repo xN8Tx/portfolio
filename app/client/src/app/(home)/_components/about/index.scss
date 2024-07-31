@@ -1,0 +1,25 @@
+.about {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 42px;
+
+  margin-bottom: 120px;
+
+  &>p {
+    opacity: 0;
+    line-height: 120%;
+
+    &>.line {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    &.on-screen {
+      opacity: 1;
+    }
+  }
+}
