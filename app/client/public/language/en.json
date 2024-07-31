@@ -1,0 +1,91 @@
+{
+  "notFound": {
+    "title": "... 404 error ...",
+    "subtitle": "Sorry, page not found",
+    "text": "Go to home page to know more about me or direct me"
+  },
+  "homePage": "Home page",
+  "move": "Move",
+  "anchors": [
+    {
+      "name": "About me",
+      "href": "/#about"
+    },
+    {
+      "name": "Skills",
+      "href": "/#skills"
+    },
+    {
+      "name": "Projects",
+      "href": "/#projects"
+    }
+  ],
+  "about": "About me",
+  "aboutText": "I'm a 20 y.o frontend developer living in Russia, Novosibirsk. I have been doing that more then two years and I devote most of my time self-improvement and develop my own projects. My main goal is to get new knowledge in programming. Deepen the knowledge already gained.",
+  "aboutButton": "Projects",
+  "skills": "Skills",
+  "skillsText": [
+    "JS, TS",
+    "CSS, SCSS, Tailwind",
+    "React",
+    "Redux, RTK, Zustand",
+    "NodeJS",
+    "Express",
+    "PostgreSQL",
+    "Docker",
+    "Figma",
+    "Git"
+  ],
+  "project": "Project",
+  "see": "See",
+  "code": "code",
+  "contact": "Contact",
+  "projects": [
+    {
+      "name": "Online school",
+      "skills": ["React", "RTK", "ExpressJS", "NodeJS", "PostgreSQL", "JWT"],
+      "github": "https://github.com/xN8Tx/start-rsl",
+      "link": "http://217.71.129.139:5408",
+      "image": "/images/projects/school.webp"
+    },
+    {
+      "name": "Architecture studio",
+      "skills": ["React", "Zustand", "TypeScript"],
+      "github": "https://github.com/xN8Tx/digital-project",
+      "link": "https://digital-project-rho.vercel.app",
+      "image": "/images/projects/architecture.webp"
+    },
+    {
+      "name": "Web studio",
+      "skills": ["HTML", "SCSS", "GSAP", "GULP"],
+      "github": "https://github.com/xN8Tx/Yudaev",
+      "link": "http://217.71.129.139:5408",
+      "image": "/images/projects/studio.webp"
+    },
+    {
+      "name": "Utils studio",
+      "skills": ["HTML", "SCSS", "GSAP", "LocomotiveScroll", "GULP"],
+      "github": "https://github.com/xN8Tx/Tom-crew",
+      "link": "https://gregarious-longma-f7da78.netlify.app/",
+      "image": "/images/projects/utils.webp"
+    }
+  ],
+  "demo": "demo",
+  "contactData": [
+    {
+      "name": "Github",
+      "href": "https://github.com/xN8Tx",
+      "icon": "git"
+    },
+    {
+      "name": "Telegram",
+      "href": "https://t.me/shteyn-web",
+      "icon": "tg"
+    },
+    {
+      "name": "eveniy@shteyn-web.ru",
+      "href": "mailto:eveniy@shteyn-web.ru",
+      "icon": "mail"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Portfolio site for frontend web developer(For me ;3) based on NextJS and TypeScript",
+  "scripts": {
+    "dev": "docker-compose -f ./config/docker/dev/docker-compose.yml up --build",
+    "start": "docker-compose -f ./config/docker/prod/docker-compose.yml --build",
+    "prod": "docker-compose -f ./config/docker/prod/docker-compose.yml build && docker-compose -f ./config/docker/prod/docker-compose.yml up -d"
+  },
+  "keywords": [],
+  "author": "Evgeniy Shteyn <evgeniy@shteyn-web.ru> (https://shteyn-web.ru)",
+  "license": "MIT"
+}
