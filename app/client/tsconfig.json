@@ -22,29 +22,8 @@
       }
     ],
     "paths": {
-      "@a/*": [
-        "./src/app/_assets/*"
-      ],
-      "@h": [
-        "./src/app/_hooks/index.tsx"
-      ],
-      "@m": [
-        "./src/app/_models/index.ts"
-      ],
-      "@c": [
-        "./src/app/_components/index.tsx"
-      ],
-      "@u": [
-        "./src/app/_ui/index.tsx"
-      ],
-      "@ut": [
-        "./src/app/_utils/index.ts"
-      ],
-      "@p": [
-        "./src/app/_context/index.tsx"
-      ],
       "@/*": [
-        "./src/app/*"
+        "./src/*"
       ]
     }
   },

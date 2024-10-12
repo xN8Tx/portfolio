@@ -1,7 +1,7 @@
-import { Wrapper } from "@c";
-import { Provider } from "@p";
+import { Wrapper } from "@/ui/base";
+import { Provider } from "@/models";
 
-import type { ChildrenProps } from "@m";
+import type { ChildrenProps } from "@/types";
 import type { Metadata } from "next";
 
 import "./_style/index.scss";

@@ -1,4 +1,4 @@
-import { Wrapper } from "./(not-found)";
+import { NotFound as Wrapper } from "@/ui/not-found";
 
 const NotFound = () => {
   return <Wrapper />;
