@@ -46,7 +46,7 @@
       "name": "Онлайн школы – WhiteCrow",
       "skills": ["TypeScript", "React", "TailwindCSS", "Zustand", "Strapi CMS"],
       "github": "https://github.com/xN8Tx/whitecrow",
-      "link": "https://whitecrow.shteyn-dev.ru",
+      "link": "https://whitecrow.shteyn-web.ru",
       "image": "/projects/whitecrow.png"
     },
     {
@@ -91,8 +91,8 @@
       "icon": "tg"
     },
     {
-      "name": "eveniy@shteyn-web.ru",
-      "href": "mailto:eveniy@shteyn-web.ru",
+      "name": "Почта",
+      "href": "mailto:eveniyshteyn@ya.ru",
       "icon": "mail"
     }
   ]

@@ -5,7 +5,7 @@
   "description": "Portfolio site for frontend web developer(For me ;3) based on NextJS and TypeScript",
   "scripts": {
     "dev": "docker compose -f ./config/dev/docker-compose.yml up --build",
-    "start": "docker compose -f ./config/prod/docker-compose.yml --build",
+    "start": "docker compose -f ./config/prod/docker-compose.yml up --build",
     "prod": "docker compose -f ./config/prod/docker-compose.yml build && docker-compose -f ./config/docker/prod/docker-compose.yml up -d"
   },
   "keywords": [],
