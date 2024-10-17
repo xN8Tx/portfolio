@@ -6,7 +6,13 @@ type ButtonProps = {
 };
 
 const Button = ({ isMenuOpen, setIsMenuOpen }: ButtonProps) => {
-  const buttonHandler = () => setIsMenuOpen((i) => !i);
+  const buttonHandler = () => {
+    setIsMenuOpen((prev) => {
+      const newValue = !prev;
+      document.body.style.overflowY = newValue ? "hidden" : "auto";
+      return newValue;
+    });
+  };
 
   return (
     <div

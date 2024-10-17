@@ -1,12 +1,11 @@
+"use client";
 import { createContext } from "react";
-
-import type { Dispatch, SetStateAction } from "react";
 
 type ThemeKeys = "dark" | "light";
 
 type Context = {
   theme: ThemeKeys;
-  setTheme: Dispatch<SetStateAction<ThemeKeys>>;
+  toggleTheme: () => void;
 };
 
 const Context = createContext({} as Context);

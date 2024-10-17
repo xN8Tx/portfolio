@@ -4,14 +4,10 @@ import { DarkTheme, LightTheme } from "@/assets/icons";
 import { ThemeContext } from "@/models";
 
 const Theme = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
-  const changeThemeHanlder = () => {
-    setTheme((t) => (t === "dark" ? "light" : "dark"));
-  };
-
-  if (theme === "dark") return <DarkTheme onClick={changeThemeHanlder} />;
-  return <LightTheme onClick={changeThemeHanlder} />;
+  if (theme === "dark") return <DarkTheme onClick={toggleTheme} />;
+  return <LightTheme onClick={toggleTheme} />;
 };
 
 export { Theme };

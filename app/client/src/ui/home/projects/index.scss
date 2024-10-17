@@ -8,20 +8,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 60px;
 
     @media screen and (max-width: 1124px) {
       flex-wrap: nowrap;
       flex-direction: column;
+      gap: 60px;
     }
   }
 
   &-item {
     width: 100%;
-    height: 80vh;
 
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 50px;
 
     &:nth-child(2) {
       justify-content: flex-end;
@@ -105,13 +106,14 @@
 
           opacity: 0;
 
-          width: 130px;
-          height: 130px;
+          width: 150px;
+          height: 150px;
 
           display: flex;
           align-items: center;
           justify-content: center;
           text-align: center;
+          text-wrap: pretty;
 
           background-color: var(--text);
           border-radius: 50%;

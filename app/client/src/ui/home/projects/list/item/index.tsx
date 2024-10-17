@@ -7,23 +7,23 @@ import { Paragraph } from "@/ui/kit";
 import { useIcon } from "@/hooks";
 
 import type { Project } from "@/types";
+import { IKImage } from "imagekitio-next";
+import Link from "next/link";
+import { ImageWrapper } from "./image-wrapper";
+import { Mock } from "node:test";
 
-type ItemProps = Project & {
+type ItemProps = {
   isSecond: boolean;
   index: number;
+  data: Project;
 };
 
-const Item = ({
-  image,
-  name,
-  skills,
-  github,
-  isSecond,
-  index,
-  link,
-}: ItemProps) => {
+const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT;
+
+const Item = ({ data, isSecond, index }: ItemProps) => {
+  const { image, name, skills, github, link } = data;
   const {
-    languageData: { demo, see },
+    languageData: { demo, see, inProgress },
   } = useContext(LanguageContext);
 
   const imageWrapperRef = useRef<HTMLAnchorElement>(null);
@@ -31,6 +31,8 @@ const Item = ({
   const lottieRef = useRef(null);
 
   const [isHover, setIsHover] = useState<boolean>(false);
+
+  const icon = useIcon("git");
 
   const handleMouseEnter = () => {
     if (lottieRef.current) {
@@ -50,72 +52,63 @@ const Item = ({
   }, [lottieRef]);
 
   useEffect(() => {
-    if (!imageWrapperRef) return;
     if (!imageWrapperRef.current) return;
     if (window.innerWidth <= 1124) return;
 
-    imageWrapperRef.current.addEventListener("mousemove", (event) => {
+    const image = imageWrapperRef.current;
+
+    const mouseMoveHandler = (event: MouseEvent) => {
       imageWrapperRef.current!.style.cssText = `cursor: none`;
       linkRef.current!.style.cssText = `
         opacity: 0.8; 
         left:${event.offsetX - 65}px; 
         top:${event.offsetY - 65}px`;
-    });
-
-    imageWrapperRef.current.addEventListener("mouseout", () => {
+    };
+    const mouseOutHandler = () => {
       linkRef.current!.style.opacity = "0";
-    });
-  }, [imageWrapperRef]);
+    };
 
-  const scrollSpeed = window.innerWidth >= 1124 ? 2 * index : 1;
+    image.addEventListener("mousemove", mouseMoveHandler);
+    image.addEventListener("mouseout", mouseOutHandler);
+
+    return () => {
+      image.removeEventListener("mousemove", mouseMoveHandler);
+      image.removeEventListener("mouseout", mouseOutHandler);
+    };
+  }, []);
 
   return (
-    <div
-      className="projects-item"
-      data-scroll
-      data-scroll-speed={isSecond ? `${scrollSpeed}` : "1"}
-    >
-      <a
-        href={link}
-        className="projects-item__image"
-        data-scroll
-        ref={imageWrapperRef}
-      >
+    <div className="projects-item" data-scroll>
+      <ImageWrapper link={link} ref={imageWrapperRef}>
         <div className="projects-item__image_wrapper" data-scroll>
-          <Image
-            width={200}
-            height={200}
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            src={image}
-            alt={name}
-            priority
-          />
+          <IKImage urlEndpoint={urlEndpoint} path={image} alt={name} />
         </div>
         <div className="projects-item__image_link" ref={linkRef}>
-          {see} {demo}
+          {link ? `${see} ${demo}` : inProgress}
         </div>
-      </a>
+      </ImageWrapper>
       <div className="projects-item__information">
         <div className="projects-item__information_text">
           <Paragraph size="regular">{name}</Paragraph>
           <Paragraph size="regular">{skills.join(", ")}</Paragraph>
         </div>
         <div className="projects-item__information_link">
-          <a
-            href={github}
-            target="_blank"
-            rel="noreferrer"
-            onMouseOver={handleMouseEnter}
-            onMouseOut={handleMouseLeave}
-          >
-            <Lottie
-              // @ts-ignore
-              lottieRef={lottieRef}
-              play={isHover}
-              animationData={useIcon("git") as JSON}
-              style={{ width: "48px", height: "48px" }}
-            />
-          </a>
+          {github && (
+            <Link
+              href={github}
+              target="_blank"
+              rel="noreferrer"
+              onMouseOver={handleMouseEnter}
+              onMouseOut={handleMouseLeave}
+            >
+              <Lottie
+                ref={lottieRef}
+                play={isHover}
+                animationData={icon as JSON}
+                style={{ width: "48px", height: "48px" }}
+              />
+            </Link>
+          )}
         </div>
       </div>
     </div>

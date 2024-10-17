@@ -4,6 +4,7 @@
     "subtitle": "Sorry, page not found",
     "text": "Go to home page to know more about me or direct me"
   },
+  "inProgress": "In progress",
   "homePage": "Home page",
   "move": "Move",
   "anchors": [
@@ -25,9 +26,9 @@
   "aboutButton": "Projects",
   "skills": "Skills",
   "skillsText": [
-    "JS, TS",
+    "JavaScript, TypeScript",
     "CSS, SCSS, Tailwind",
-    "React",
+    "React, NextJS",
     "Redux, RTK, Zustand",
     "NodeJS",
     "Express",
@@ -42,32 +43,39 @@
   "contact": "Contact",
   "projects": [
     {
-      "name": "Online school",
-      "skills": ["React", "RTK", "ExpressJS", "NodeJS", "PostgreSQL", "JWT"],
-      "github": "https://github.com/xN8Tx/start-rsl",
-      "link": "http://217.71.129.139:5408",
-      "image": "/images/projects/school.webp"
+      "name": "Online school – WhiteCrow",
+      "skills": ["TypeScript", "React", "TailwindCSS", "Zustand", "Strapi CMS"],
+      "github": "https://github.com/xN8Tx/whitecrow",
+      "link": "https://whitecrow.shteyn-web.ru",
+      "image": "/projects/whitecrow.png"
     },
     {
-      "name": "Architecture studio",
-      "skills": ["React", "Zustand", "TypeScript"],
-      "github": "https://github.com/xN8Tx/digital-project",
-      "link": "https://digital-project-rho.vercel.app",
-      "image": "/images/projects/architecture.webp"
+      "name": "Messenger – Blossom",
+      "skills": [
+        "TypeScript",
+        "React",
+        "RTK",
+        "WebSocket",
+        "Express",
+        "JWT",
+        "PostgreSQL"
+      ],
+      "github": "https://github.com/xN8Tx/blossom",
+      "link": "",
+      "image": "/projects/blossom.png"
     },
     {
-      "name": "Web studio",
-      "skills": ["HTML", "SCSS", "GSAP", "GULP"],
-      "github": "https://github.com/xN8Tx/Yudaev",
-      "link": "http://217.71.129.139:5408",
-      "image": "/images/projects/studio.webp"
+      "name": "Online Shop – Bayersha",
+      "skills": ["TypeScript", "NextJS", "Strapi CMS"],
+      "github": "",
+      "link": "https://bayersha.ru",
+      "image": "/projects/bayersha.png"
     },
     {
-      "name": "Utils studio",
-      "skills": ["HTML", "SCSS", "GSAP", "LocomotiveScroll", "GULP"],
-      "github": "https://github.com/xN8Tx/Tom-crew",
-      "link": "https://gregarious-longma-f7da78.netlify.app/",
-      "image": "/images/projects/utils.webp"
+      "name": "Company site – Topy",
+      "skills": ["TypeScript", "NextJS", "TailwindCSS", "Strapi CMS"],
+      "link": "https://topy.shteyn-web.ru",
+      "image": "/projects/topy.png"
     }
   ],
   "demo": "demo",
@@ -83,8 +91,8 @@
       "icon": "tg"
     },
     {
-      "name": "eveniy@shteyn-web.ru",
-      "href": "mailto:eveniy@shteyn-web.ru",
+      "name": "eveniyshteyn@ya.ru",
+      "href": "mailto:eveniyshteyn@ya.ru",
       "icon": "mail"
     }
   ]

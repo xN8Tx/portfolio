@@ -20,6 +20,7 @@ const Header = () => {
   // Setup all anchors to right scroll
   useEffect(() => {
     if (typeof window === "undefined") return;
+    if (!locomotive) return;
 
     const anchors = document.querySelectorAll("[data-anchor]");
 
@@ -36,7 +37,7 @@ const Header = () => {
         ? target.href.split("#").pop()
         : (target.parentNode as HTMLAnchorElement).href.split("#").pop();
 
-      locomotive!.scrollTo(`#${id}`, { offset: 20 });
+      locomotive.scrollTo(`#${id}`, { offset: 20 });
     };
 
     anchors.forEach((anchor) => {

@@ -20,7 +20,7 @@ const Menu = ({ isOpen }: MenuProps) => {
     <div
       className="header__burger-menu"
       data-isopen={isOpen.toString()}
-      style={{ height: `${window.innerHeight}px` }}
+      style={{ height: `100vh` }}
     >
       <div className="header__burger-menu__wrapper">
         <div className="header__burger-menu__navigation">

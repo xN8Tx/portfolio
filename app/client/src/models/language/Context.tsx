@@ -1,18 +1,14 @@
+"use client";
 import { createContext } from "react";
 
-import type { Dispatch, SetStateAction } from "react";
-import type { LanguageContent, Loading } from "@/types";
-
-type LanuageType = "ru" | "en";
+import type { LanguageContent, LanuageType } from "@/types";
 
 type Context = {
   language: LanuageType;
-  languageLoading: Loading;
   languageData: LanguageContent;
-  setLanguage: Dispatch<SetStateAction<LanuageType>>;
+  changeLanguage: () => void;
 };
 
 const Context = createContext({} as Context);
 
-export type { LanuageType };
 export { Context };

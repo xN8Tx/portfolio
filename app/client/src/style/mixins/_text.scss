@@ -1,18 +1,18 @@
-@/typesixin RegularText {
+@mixin RegularText {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
 }
 
-@/typesixin SmallText {
+@mixin SmallText {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
 }
 
-@/typesixin LargeText {
+@mixin LargeText {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;

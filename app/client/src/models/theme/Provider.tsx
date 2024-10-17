@@ -1,37 +1,32 @@
 "use client";
-import { useEffect, useState } from "react";
-import { Context } from "./Context";
+import { useLayoutEffect, useState } from "react";
+import { Context, ThemeKeys } from "./Context";
 
 import type { ChildrenProps } from "@/types";
 
-const getTheme = () => {
-  if (typeof localStorage === "undefined") return "dark";
-  if (typeof window == undefined) return "dark";
-
-  const localStorageTheme = localStorage.getItem("theme");
-
-  if (localStorageTheme === "dark" || localStorageTheme === "light") {
-    return localStorageTheme;
-  }
-
-  if (window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
-  return "light";
-};
-
 const Provider = ({ children }: ChildrenProps) => {
-  const [theme, setTheme] = useState(getTheme);
+  const [theme, setTheme] = useState<ThemeKeys>("dark");
 
-  useEffect(() => {
-    if (typeof localStorage === "undefined") return () => {};
-    if (typeof document === "undefined") return () => {};
-    if (typeof window == undefined) return () => {};
+  useLayoutEffect(() => {
+    if (!document) return;
+    const currentTheme = document.cookie.includes("theme=dark")
+      ? "dark"
+      : "light";
+    setTheme(currentTheme);
+  }, []);
 
-    document.documentElement.dataset.theme = theme;
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+  const toggleTheme = () => {
+    if (!document) return;
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    document.cookie = `theme=${newTheme}; path=/`;
+    document.documentElement.setAttribute("data-theme", newTheme);
+  };
 
   return (
-    <Context.Provider value={{ theme, setTheme }}>{children}</Context.Provider>
+    <Context.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </Context.Provider>
   );
 };
 

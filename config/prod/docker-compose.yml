@@ -5,7 +5,7 @@ services:
     restart: always
     container_name: portfolio-client-prod
     build:
-      context: ../../../app/client
+      context: ../../app/client
       dockerfile: Dockerfile.dev
     volumes:
       - /app/node_modules

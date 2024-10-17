@@ -7,7 +7,7 @@ import { LanguageContext } from "@/models";
 
 import "./index.scss";
 
-const NotFound = () => {
+const Wrapper = () => {
   const backgroundRef = useRef<HTMLDivElement>(null);
 
   const { languageData } = useContext(LanguageContext);
@@ -54,4 +54,4 @@ const NotFound = () => {
   );
 };
 
-export { NotFound };
+export { Wrapper };

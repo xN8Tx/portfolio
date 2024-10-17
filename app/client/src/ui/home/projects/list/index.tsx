@@ -10,17 +10,8 @@ const List = () => {
 
   return (
     <div className="projects__list" data-scroll>
-      {projects.map((project, index) => (
-        <Item
-          key={index}
-          name={project.name}
-          skills={project.skills}
-          github={project.github}
-          link={project.link}
-          image={project.image}
-          isSecond={(index + 1) % 2 === 0}
-          index={index + 1}
-        />
+      {projects.map((project) => (
+        <Item key={project.name} data={project} />
       ))}
     </div>
   );

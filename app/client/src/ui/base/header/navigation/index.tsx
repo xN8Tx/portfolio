@@ -25,7 +25,7 @@ const Navigation = () => {
   return (
     <nav className="header__nav" id="navigation">
       <div>
-        {languageData.anchors.map((anchor, index) => (
+        {languageData?.anchors?.map((anchor, index) => (
           <Link
             data-anchor
             key={index}

@@ -3,7 +3,7 @@ import { Wrapper } from "@/ui/home";
 
 const Home = async () => {
   return (
-    <RootProvider language="ru">
+    <RootProvider language="en">
       <Wrapper />
     </RootProvider>
   );

@@ -46,8 +46,7 @@ const Item = ({ href, name, icon }: ItemProps) => {
           isHover={false}
         >
           <Lottie
-            // @ts-ignore
-            lottieRef={lottieRef}
+            ref={lottieRef}
             play={isHover}
             animationData={animationData}
             style={{ width: "32px", height: "32px" }}

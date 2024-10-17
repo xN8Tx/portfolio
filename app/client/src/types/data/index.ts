@@ -5,6 +5,13 @@ type Anchor = {
   href: string;
 };
 
+export type MetadataContent = {
+  title: string;
+  description: string;
+  keywords: string;
+  author: string;
+};
+
 export type Project = {
   name: string;
   skills: string[];
@@ -42,4 +49,5 @@ export type LanguageContent = {
   projects: Project[];
   demo: string;
   contactData: ContactData[];
+  inProgress: string;
 };

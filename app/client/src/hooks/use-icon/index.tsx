@@ -9,7 +9,7 @@ const useIcon = (icon: Icons) => {
   const [selectedIcon, setSelectedIcon] = useState<JSON | null>(null);
 
   const getIcon = async () => {
-    const importIcon = await import(`@a/lottie/${theme}/${icon}.json`);
+    const importIcon = await import(`@/assets/lottie/${theme}/${icon}.json`);
 
     setSelectedIcon(importIcon);
   };

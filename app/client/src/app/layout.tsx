@@ -1,27 +1,35 @@
-import { Wrapper } from "@/ui/base";
-import { Provider } from "@/models";
+import { cookies } from "next/headers";
+
+import { getMetadata } from "@/lib";
+
+import { Loader } from "@/ui/base/loader";
+import { Suspense } from "react";
+import { SuspenceFallback } from "@/ui/base";
 
 import type { ChildrenProps } from "@/types";
-import type { Metadata } from "next";
 
-import "./_style/index.scss";
+import "@/style/index.scss";
 
-const metadata: Metadata = {
-  title: "Evgeniy Shteyn",
-  description: "Frontend TypeScript web developer from Russia",
+const getTheme = () => {
+  const themeCookie = cookies().get("theme");
+  return themeCookie?.value === "light" ? "light" : "dark";
+};
+
+export const generateMetadata = async () => {
+  return await getMetadata("ru");
 };
 
 const RootLayout = ({ children }: ChildrenProps) => {
+  const theme = getTheme();
   return (
-    <html lang="en">
+    <html lang="ru" data-theme={theme}>
       <body>
-        <Provider>
-          <Wrapper>{children}</Wrapper>
-        </Provider>
+        <Loader />
+        <Suspense fallback={<SuspenceFallback />}></Suspense>
+        {children}
       </body>
     </html>
   );
 };
 
 export default RootLayout;
-export { metadata };
